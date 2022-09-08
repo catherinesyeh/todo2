@@ -1,7 +1,24 @@
 # todo2
-Todo app made with Node.js and MongoDB
+Todo app made with Node.js and MongoDB: https://cyeh-todo.herokuapp.com/
 
-## setup instructions
+## instructions
+Open [webpage](cyeh-todo.herokuapp.com/) to start exploring. The app comes preloaded with a few todo items as an example.
+
+![Screenshot of todo app](public/img/screenshot1.png)
+
+*Try these features out!*
+1. Type a todo into the input box and press the ```+``` button to add it to the list
+2. Check off a todo by clicking on it
+3. Edit or remove a todo by pressing the ```pencil``` or ```X``` icons on the right of each item
+
+![Screenshot of todo app in edit view](public/img/screenshot2.png)
+
+4. Once you press the ```edit``` button, you can change the todo text and then confirm/cancel your request
+
+## resources used
+I followed the medium tutorial provided in the assignment description: [https://medium.com/@diogo.fg.pinheiro/simple-to-do-list-app-with-node-js-and-mongodb-chapter-2-3780a1c5b039](https://medium.com/@diogo.fg.pinheiro/simple-to-do-list-app-with-node-js-and-mongodb-chapter-2-3780a1c5b039) with some modifications.
+
+## (OLD) dev setup instructions
 1. Clone this repo:
 ```
 git clone https://github.com/catherinesyeh/todo2.git
@@ -20,20 +37,3 @@ npm start
 ```
 
 5. Navigate to ```http://localhost:3000/``` in your browser to start exploring.
-
-## features
-The app comes preloaded with a few todo items as an example.
-
-![Screenshot of todo app](public/img/screenshot1.png)
-
-*Try these features out!*
-1. Type a todo into the input box and press the ```+``` button to add it to the list
-2. Check off a todo by clicking on it
-3. Edit or remove a todo by pressing the ```pencil``` or ```X``` icons on the right of each item
-
-![Screenshot of todo app in edit view](public/img/screenshot2.png)
-
-4. Once you press the ```edit``` button, you can change the todo text and then confirm/cancel your request
-
-## resources used
-I followed the medium tutorial provided in the assignment description: [https://medium.com/@diogo.fg.pinheiro/simple-to-do-list-app-with-node-js-and-mongodb-chapter-2-3780a1c5b039](https://medium.com/@diogo.fg.pinheiro/simple-to-do-list-app-with-node-js-and-mongodb-chapter-2-3780a1c5b039) with some modifications.
