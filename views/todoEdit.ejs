@@ -1,19 +1,30 @@
 <!-- View for editing todo tasks -->
 <!DOCTYPE html>
 <head>
+    <!-- App info -->
     <title>Todo App</title>
+    <meta name="description" content="Todo App">
+    <meta property="og:image" content="/static/img/socimg.png">
+    <link rel="icon" type="image/png" href="/static/img/fav.png">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="/static/stylesheets/style.css" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai|Candal|Chewy&display=swap" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Charis+SIL:ital,wght@0,400;0,700;1,400;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 </head>
 <body>
     <div class="todo-container">
-        <h2>To-Do List</h2>
+        <h2>My Todos</h2>
         <div class="todo">
             <form action="" method="POST" class="todo-header">
-                <input type="text" name="content">
-                <button type="submit"><span class="fas fa-plus"></span></button>
+                <input type="text" name="content" placeholder="Type a new todo..." title="type todo">
+                <button type="submit" title="add todo"><span class="fas fa-plus"></span></button>
             </form>
             <ul class="todo-list">
             <!-- Allow users to edit existing tasks -->
@@ -21,18 +32,19 @@
             <% if (details._id == idTask) { %>
             <li class="todo-list-item">
                 <form action="/edit/<%= details._id %>" method="POST">
-                    <input type="text" value="<%= details.content %>" name="content">
-                    <button type="submit">Confirm</button>
-                    <a href="/" class="cancel">Cancel</a>
+                    <input type="text" value="<%= details.content %>" name="content" title="edit todo">
+                    <button type="submit" title="confirm">Confirm</button>
+                    <a href="/" class="cancel" title="cancel">Cancel</a>
                 </form>
             </li>
             <% } else { %>
             <!-- If not in edit view, just show task list w/ options to remove and edit -->
             <li class="todo-list-item">
-                <div class="todo-list-item-name"><%= details.content %></div>
-                <a href="/edit/<%= details._id %>" class="edit"> <span class="fas fa-edit"></span>
+                <!-- Added ability to cross out tasks on click -->
+                <div class="todo-list-item-name" onclick="this.classList.toggle('done');" title="toggle done"><%= details.content %></div>
+                <a href="/edit/<%= details._id %>" class="edit" title="edit"> <span class="fas fa-edit"></span>
                 </a>
-                <a href="/remove/<%= details._id %>" class="remove"> <span class="fas fa-times"></span>
+                <a href="/remove/<%= details._id %>" class="remove" title="remove"> <span class="fas fa-times"></span>
                 </a>
             </li>
             <% } %>
