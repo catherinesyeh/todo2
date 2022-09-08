@@ -7,7 +7,7 @@ Todo app made with Node.js and MongoDB
 git clone https://github.com/catherinesyeh/todo2.git
 ```
 
-2. You will need to create & save a ```env``` file with your MongoDB connection string, e.g.,
+2. You will need to create & save an ```env``` file with your MongoDB connection string, e.g.,
 ```
 DB_CONNECT = mongodb+srv://cyeh_m0cluster:<password>@cluster0.yglgu5f.mongodb.net/?retryWrites=true&w=majority
 ```
