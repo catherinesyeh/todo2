@@ -12,12 +12,14 @@ git clone https://github.com/catherinesyeh/todo2.git
 DB_CONNECT = mongodb+srv://cyeh_m0cluster:<password>@cluster0.yglgu5f.mongodb.net/?retryWrites=true&w=majority
 ```
 
-3. Start the app:
+3. Make sure you have Node.js installed
+
+4. Start the app:
 ```
 npm start
 ```
 
-4. Navigate to ```http://localhost:3000/``` in your browser to start exploring.
+5. Navigate to ```http://localhost:3000/``` in your browser to start exploring.
 
 ## features
 The app comes preloaded with a few todo items as an example.
