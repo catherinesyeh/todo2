@@ -34,6 +34,7 @@
 }
 
 html {
+    /* add smooth scrolling to page */
     scroll-behavior: smooth;
 }
 
@@ -188,7 +189,7 @@ input:focus-within, input:focus-visible {
     cursor: pointer;
 }
 
-.todo-list-item div.done {
+.todo-list-item div.done { /* cross out tasks to mark them as done */
     text-decoration: line-through;
 }
 
