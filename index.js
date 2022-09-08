@@ -15,7 +15,7 @@ mongoose.connect(process.env.DB_CONNECT, { useNewURLParser: true }, () => {
     console.log("Connected to db!");
     // specify port number & tell express app to listen to the port
     // only run after connection is made
-    app.listen(3000, () => console.log("Server Up and running"));
+    app.listen(process.env.PORT || 3000, () => console.log("Server Up and running"));
 });
 
 // let app access public files
